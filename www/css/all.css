@@ -214,8 +214,15 @@ table {
 
 td, th {
   padding: 0; }
-
-
+/*
+img {
+    page-break-inside: avoid;
+    vertical-align: middle;
+    -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+  }
+*/
 /* Custom9 */
 
 html {
@@ -282,7 +289,7 @@ address {
 	font-size: 12px;
 	line-height: 15px;
 }
-.responsive-img { display: block; max-width: 100%; width: auto; margin: 0 auto; }
+.responsive-img { display: block; max-width: 100%; width: auto; margin: 0 auto; height: auto; }
 
 /* ==========================================================================
       Site Styles: Home
@@ -732,6 +739,10 @@ form {
 	.three-column .col { width: 95%; margin-right: 0; }
 	.question-container .three-column .col { min-height: 100%; }
 }
+
+/* ==========================================================================
+   off-canvas styles
+   ========================================================================== */
 
 a.open-panel, a.close-panel {
   display: none;
