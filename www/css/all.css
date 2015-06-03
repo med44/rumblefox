@@ -394,16 +394,17 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 .learn-container .col h3 {
 	background: transparent url("../images/icons-columns.png") 6px 0 no-repeat;
 	padding-bottom: 0;
-	line-height: 34px;
+	line-height: normal;
+	min-height: 34px;
 	margin-bottom: 7px;
 }
 .learn-container .col.get h3 {
-	background-position: 0 -37px;
-}
-.learn-container .col.help h3 {
 	background-position: 0 -71px;
 }
-.learn-container .col h3 span { display: block; padding-left: 45px; }
+.learn-container .col.help h3 {
+	background-position: 0 -139px;
+}
+.learn-container .col h3 span { display: block; padding-left: 45px; padding-top: 9px; }
 
 .title-header { padding-bottom: 14px; }
 .title-header h2 {
