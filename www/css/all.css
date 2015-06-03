@@ -248,8 +248,12 @@ a {
 	margin-top: 20px;
 	padding: 3% 5%;
 	display: inline-block;
+	font-weight: 600;
 }
-.view {	line-height: 38px; }
+.view, .view.hover, .view:active, .view:visited {	
+	line-height: 58px; 
+	color: #40B4E5;
+}
 .bg-grey {
 	background-color: #F7F7F7;
 }
@@ -364,7 +368,7 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	float: left;
 	width: 30%;
 	margin-right: 5%;
-	margin-bottom: 5%;
+	/*margin-bottom: 5%;*/
 	min-height: 150%;
 }
 .three-column .col:last-child { margin-right: 0; }
@@ -385,7 +389,21 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 .info-container .two-column .col:last-child {
 	border-left: 1px solid #D0D4DB;
 }
-.learn-container { margin-top: 10px; }
+.learn-container { margin-top: 10px; margin-bottom: 20px; }
+.learn-container .three-column{ padding: 23px 0 28px; }
+.learn-container .col h3 {
+	background: transparent url("../images/icons-columns.png") 6px 0 no-repeat;
+	padding-bottom: 0;
+	line-height: 34px;
+	margin-bottom: 7px;
+}
+.learn-container .col.get h3 {
+	background-position: 0 -37px;
+}
+.learn-container .col.help h3 {
+	background-position: 0 -71px;
+}
+.learn-container .col h3 span { display: block; padding-left: 45px; }
 
 .title-header { padding-bottom: 14px; }
 .title-header h2 {
