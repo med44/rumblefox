@@ -283,11 +283,7 @@ address {
 	line-height: 15px;
 }
 .responsive-img { display: block; max-width: 100%; width: auto; margin: 0 auto; }
-.lightblue-box {
-	background: #F4FBFE;
-	border-radius: 4px;
-	padding: 4% 6%;
-}
+
 /* ==========================================================================
       Site Styles: Home
    ========================================================================== */
@@ -616,6 +612,11 @@ form {
 .question-container h4, .question-container p { margin-bottom: 8px; }
 .question-container .three-column .col { min-height: 500px; }
 
+.lightblue-box {
+	background: #F4FBFE;
+	border-radius: 4px;
+	padding: 6% 4%;
+}
 .col .lightblue-box h3 {
 	font-family: Georgia;
 	font-size: 22px;
@@ -629,7 +630,26 @@ form {
 	color: #4A4A4A;
 	line-height: 24px;
 }
-
+.col .faq li h3 { margin-bottom: 0.9em; }
+.col .faq li {
+	background: transparent url("../images/icons-questions.png") 0 0 no-repeat;
+	padding-left: 35px;
+	margin-bottom: 16px;
+}
+.col .faq li p { 
+	font-size: 16px;
+	line-height: 24px;
+	margin-left: -28px; 
+}
+.col .faq li.help {
+	background-position: 0 0;
+}
+.col .faq li.call {
+	background-position: 0 -161px;
+}
+.col .faq li.email {
+	background-position: 0 -200px;
+}
 
 /* ==========================================================================
    Footer styles
