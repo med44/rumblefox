@@ -702,11 +702,11 @@ form {
 .default.container { padding-top: 12px; }
 .default.container p { margin-bottom: 33px; }
 .default.container p:last-child { margin-bottom: 0; }
-.banner { margin-top: 6.5%; padding-right: 18%; margin-bottom: 50px; }
+.banner { margin-top: 6.5%; padding-right: 5%; margin-bottom: 50px; }
 .banner h1, .banner h2 { margin: 0; }
 .banner h1 {
 	font-family: Georgia;
-	font-size: 36px;
+	font-size: 31px;
 	color: #000000;
 	line-height: 41px;
 	margin-bottom: 8px;
@@ -735,6 +735,60 @@ form {
 	font-weight: 400;
 }
 
+.information-list {}
+.information-list li {
+	border-bottom: 1px solid #D0D4DB;
+}
+.information-list .image-right {
+	position: relative;
+	margin: 0 auto;
+}
+.image-right img {
+	float: right;
+}
+.image-left img {
+	float: left;
+	margin-left: 6%;
+}
+.information-list section {
+	position: relative;
+	width: 100%;
+	clear: both;
+}
+.information-list section h3 {
+	text-transform: uppercase;
+	font-family: Georgia;
+	font-size: 20px;
+	color: #001A71;
+	line-height: 22px;
+	margin-bottom: 22px;
+}
+.information-list section p {
+	font-size: 14px;
+	line-height: 19px;
+	margin-bottom: 31px;
+}
+.image-right section div,
+.image-left section div {
+	margin: 0;
+	width: 44%;
+	bottom: 32px;
+}
+.image-right section div {
+	float: left;
+	margin-left: 7%;
+	padding-top: 5%;
+}
+.image-left section div {
+	float: right;
+	padding-top: 9%;
+	margin-right: 4%;
+}
+
+.information-list section div .outline-btn {
+	display: inline;
+	padding: 6px 14px;
+}
 /* ==========================================================================
    Footer styles
    ========================================================================== */
