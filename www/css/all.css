@@ -737,11 +737,13 @@ form {
 
 .information-list {}
 .information-list li {
-	border-bottom: 1px solid #D0D4DB;
-}
-.information-list .image-right {
 	position: relative;
 	margin: 0 auto;
+	border-bottom: 1px solid #D0D4DB;
+	padding-bottom: 31px;
+	margin-bottom: 52px;
+}
+.information-list .image-right {
 }
 .image-right img {
 	float: right;
@@ -781,7 +783,7 @@ form {
 }
 .image-left section div {
 	float: right;
-	padding-top: 9%;
+	padding-top: 4%;
 	margin-right: 4%;
 }
 
