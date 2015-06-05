@@ -860,9 +860,19 @@ form {
 		width: 100%; 
 	}
 	.content-rectangle { width: 80%; }
+	.information-list section div { width: auto; }
+	.information-list section div .outline-btn { display: block; width: 80%; margin: 0 auto 10px auto; }
+	.information-list section p span { display: none; }
+	.information-list img { margin: 0 auto; float: none; }
 	.footer-container ul li.copy,
 	.footer-container ul li.footer-nav,
 	.footer-container ul li.subscribe { float: none; width: 100%; margin-bottom: 2%; }
+}
+
+@media only screen  and (min-width: 800px) and (max-width: 945px) {
+	.information-list section div { width: 36%; }
+	.information-list section div .outline-btn { display: block; width: 80%; margin: 0 auto 10px auto; }
+	.information-list section p span { display: none; }
 }
 @media only screen and (max-width: 630px) {
 	.two-column .col { width: 100%; float: none; }
