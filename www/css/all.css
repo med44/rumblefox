@@ -223,7 +223,11 @@ img {
           transition: all .2s ease-in-out;
   }
 */
-/* Custom9 */
+
+
+/* ==========================================================================
+      Global Styles: Override
+   ========================================================================== */
 
 html {
     color: #4A4A4A;
@@ -234,6 +238,12 @@ body { font-family: 'Open Sans', Arial, serif; font-weight: 300; }
 a {
 	font-size: 14px;
 	color: #40B4E5;
+}
+
+.container {
+	width: 90%;
+    margin: 0 auto;
+    max-width: 1134px;
 }
 .default-btn, .default-btn:hover,
 .default-btn:visited, .default-btn:active {
@@ -292,33 +302,47 @@ address {
 .responsive-img { display: block; max-width: 100%; width: auto; margin: 0 auto; height: auto; }
 
 /* ==========================================================================
-      Site Styles: Home
+      Site Styles: Nav
    ========================================================================== */
-.container {
-	width: 90%;
-    margin: 0 auto;
-    max-width: 1134px;
-}
+
 .header-container {
 	background-color: #001A71;
-	padding: 19px 0 15px 0;
 }
-header img { display: block; float: left; }
+header .logo { 
+	display: block; 
+	float: left; 
+	margin-top: 19px; 
+	margin-bottom: 20px; 
+}
 header nav {
 	float: left; 
-	margin-left: 7%;
-	width: 76%;
+	margin-left: 5%;
+	width: 80%;
 }
-header nav ul.main { float: left; width: 84%; margin-top: 8px; }
-header nav ul.admin {float: right; width: auto; }
+header nav ul.main { float: left; width: 84%; }
+header nav ul.admin {float: right; width: auto; padding-top: 19px; }
+
+header nav ul.main li a {
+	display: block;
+	padding: 27px 20px 15px 20px;
+}
 header nav ul li { 
-	display: inline-block; 
+	float: left; 
 	font-size: 16px;
 	color: #fff;
-	margin-right: 7%;
+	text-align: center;
+}
+header nav ul.main li.active a,
+header nav ul.main li a:hover {
+	background: rgba(64,180,229,0.35);
 }
 header nav ul li:last-child { margin-right: 0; }
 header a, header a:hover, header a:visited, header a:active { color: #fff; font-size: 16px; }
+
+
+/* ==========================================================================
+      Site Styles: Home
+   ========================================================================== */
 
 .hero.home-banner {
     background-image: url("../images/banners/home.jpg");
@@ -366,6 +390,19 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 .three-column {
 	padding: 3% 0 1%;
 	margin-bottom: 37px;
+}
+.three-column.three-column-default {
+	margin-top: 35px;
+}
+.three-column.three-column-default .col h3 {
+	border-bottom: 1px solid #D0D4DB;
+	color: #001E83;
+	letter-spacing: 0.2px;
+	padding-bottom: 11px;
+	margin-bottom: 12px;
+}
+.three-column.three-column-default .col p {
+	margin-bottom: 24px;
 }
 .three-column .col {
 	float: left;
@@ -660,6 +697,45 @@ form {
 }
 
 /* ==========================================================================
+      Site Styles: Secondary
+   ========================================================================== */
+.default.container { padding-top: 12px; }
+.default.container p { margin-bottom: 33px; }
+.default.container p:last-child { margin-bottom: 0; }
+.banner { margin-top: 6.5%; padding-right: 18%; margin-bottom: 50px; }
+.banner h1, .banner h2 { margin: 0; }
+.banner h1 {
+	font-family: Georgia;
+	font-size: 36px;
+	color: #000000;
+	line-height: 41px;
+	margin-bottom: 8px;
+}
+.banner h2 {
+	font-size: 17px;
+	color: #4A4A4A;
+	line-height: 23px;
+}
+
+.content p { margin-bottom: 42px; }
+
+.content-rectangle {
+	background-color: #F4FBFE;
+	text-align: center;
+	width: 52%;
+	margin: 60px auto;
+	padding: 3% 6%;
+}
+.content-rectangle h3 {
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 0.35px;
+	line-height: 25px;
+	margin-bottom: 5px;
+	font-weight: 400;
+}
+
+/* ==========================================================================
    Footer styles
    ========================================================================== */
 
@@ -729,6 +805,7 @@ form {
 	.events-container .events, .riskbook-container, .events-container section {
 		width: 100%; 
 	}
+	.content-rectangle { width: 80%; }
 	.footer-container ul li.copy,
 	.footer-container ul li.footer-nav,
 	.footer-container ul li.subscribe { float: none; width: 100%; margin-bottom: 2%; }
@@ -749,6 +826,7 @@ a.open-panel, a.close-panel {
   text-align: right;
 }
 @media only screen and (max-width: 55em) {
+	a.open-panel { margin-top: 19px; }
 	a.open-panel, a.close-panel {
 		display: block;
 	}
@@ -762,9 +840,10 @@ a.open-panel, a.close-panel {
 		margin: 0;
 	}
 	header nav ul.main, header nav ul.admin { float: none; width: 100%; }
-	header nav ul li { 
+	header nav ul li {
+		float: none; 
 		display: block; 
-		padding: 3%; 
+		padding: 0; 
 		border-bottom: 1px solid #fff; 
 		margin: 0; 
 	}
