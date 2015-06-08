@@ -254,8 +254,8 @@ a {
 	line-height: 19px;
 	padding: 4% 23px;
 }
-.round-btn, .round-btn:hover,
-.round-btn:active, .round-btn:visited {
+.container .round-btn, .container .round-btn:hover,
+.container .round-btn:active, .container .round-btn:visited {
 	display: block;
 	background: #3AAFDA;
 	border-radius: 4px;
@@ -267,10 +267,7 @@ a {
 	display: inline-block;
 	font-weight: 600;
 }
-.view, .view.hover, .view:active, .view:visited {	
-	line-height: 58px; 
-	color: #40B4E5;
-}
+
 .bg-grey {
 	background-color: #F7F7F7;
 }
@@ -294,6 +291,8 @@ a.outline-btn:active, a.outline-btn:visited, button.outline-btn {
 	padding: 1% 0;
 	width: 30%;
 }
+a.link,  a:hover.link,  a:active.link,  a:visited.link { color: #40B4E5; }
+
 address { 
 	font-style: normal; 
 	font-size: 12px;
@@ -336,7 +335,7 @@ header nav ul.main li.active a,
 header nav ul.main li a:hover {
 	background: rgba(64,180,229,0.35);
 }
-header nav ul li:last-child { margin-right: 0; }
+header nav ul li:last-of-type { margin-right: 0; }
 header a, header a:hover, header a:visited, header a:active { color: #fff; font-size: 16px; }
 
 
@@ -426,6 +425,17 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	line-height: 24px;	
 }
 
+.two-column a, .two-column a:hover, .two-column a:active, .two-column a:visited,
+.three-column a, .three-column a:hover, .three-column a:active, .three-column a:visited {	
+	line-height: 58px; 
+	color: #40B4E5;
+}
+
+.internal-coluum .col { text-align: left; min-height: 500px; padding: 0; margin-right: 3%; width: 44%; }
+.internal-coluum .col:last-child { margin-right: 0; }
+.internal-coluum img {margin-top: 17px; margin-bottom: 35px; }
+.internal-coluum h4, .internal-coluum p { margin-bottom: 8px; }
+
 .column-custom .lightblue-box {
 	background: #F4FBFE;
 	padding: 2% 10%;
@@ -471,10 +481,10 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	line-height: 24px;
 	font-weight: 300;
 }
-.events-container .events, .riskbook-container { position: relative; float: left; }
+.semantic-elements article, .semantic-elements .sidebar { position: relative; float: left; }
 
-.events-container .events { width: 69%; }
-.events-container h3 {
+.semantic-elements article { width: 69%; }
+.semantic-elements h3 {
 	font-family: Georgia;
 	font-size: 16px;
 	color: #000;
@@ -483,7 +493,7 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	font-weight: 400;
 	margin-bottom: 12px; margin-top: 30px;
 }
-.events-container section { 
+.semantic-elements section { 
 	position: relative; 
 	width: 84%;
 	margin-bottom: 22px;
@@ -491,21 +501,21 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	padding-bottom: 19px;
 	border-bottom: 1px solid #D0D4DB;
 }
-.events-container section:last-child { border-bottom: 0; }
+.semantic-elements section:last-of-type { border-bottom: 0; margin-bottom: 0; }
 
 .events .date {
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: block;
-	background: #A2ABBA;
+	line-height: normal;
 	font-size: 37px;
-	color: #fff;
-	line-height: 51px;
 	width: 74px;
 	text-align: center;
 	text-transform: uppercase;
 	padding: 2% 0;
+	background-color: #A2ABBA;
+	color: #fff;
 }
 .events .date small {
 	font-family: Georgia;
@@ -514,6 +524,19 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	line-height: 16px;
 	display: block;
 }
+.events .date em {
+	display: inline-block;
+	font-style: normal;
+	width: 90%;
+	line-height: 30px;
+}
+.events.thrid-party .date {
+	background-color: #F1F1F1;
+	border: 2px solid #A2ABBA;
+	color: #A2ABBA;
+}
+.events.thrid-party .date small { color: #A2ABBA; }
+
 .events dl { margin-bottom: 20px; }
 .events dl dt {
 	font-size: 12px;
@@ -536,14 +559,14 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	line-height: 15px;
 }
 
-.riskbook-container { width: 31%; }
+.semantic-elements .sidebar { width: 31%; }
 .riskbook-box {
 	background: #EDF0F4;
 	margin-top: 22px;
 	margin-bottom: 20px;
 }
 .riskbook-box h3 {
-	background: #8E1919;
+	background-color: #11172E;
 	font-family: Georgia;
 	font-size: 16px;
 	color: #fff;
@@ -663,17 +686,17 @@ form {
 	background-image: none;
 }
 
-.question-container {}
-.question-container img {margin-top: 17px; margin-bottom: 35px; }
-.question-container h4, .question-container p { margin-bottom: 8px; }
-.question-container .three-column .col { min-height: 500px; }
 
 .lightblue-box {
 	background: #F4FBFE;
 	border-radius: 4px;
 	padding: 6% 5%;
 }
-.col .lightblue-box h3 {
+.aside-box {
+	margin-top: 30px;
+}
+
+.aside-box .lightblue-box h3 {
 	font-family: Georgia;
 	font-size: 22px;
 	color: #000;
@@ -681,30 +704,30 @@ form {
 	text-transform: none;
 	margin-bottom: 1.2em;
 }
-.col .lightblue-box a, .col .lightblue-box a:hover {
+.aside-box .lightblue-box a, .aside-box .lightblue-box a:hover {
 	font-size: 14px;
 	color: #4A4A4A;
 	line-height: 24px;
 }
-.col .faq li h3 { margin-bottom: 0.9em; }
-.col .faq li {	margin-bottom: 16px; }
-.col .faq li span {
+.faq li h3 { margin-bottom: 0.9em; }
+.faq li {	margin-bottom: 16px; }
+.faq li span {
 	display: inline;
 	background: transparent url("../images/icons-questions.png") 0 0 no-repeat;
 	padding-left: 35px;
 	padding-bottom: 4px;
 }
-.col .faq li p { 
+.faq li p { 
 	font-size: 16px;
 	line-height: 24px;
 }
-.col .faq li span.help {
+.faq li span.help {
 	background-position: 0 4px;
 }
-.col .faq li span.call {
+.faq li span.call {
 	background-position: 0 -161px;
 }
-.col .faq li span.email {
+.faq li span.email {
 	background-position: 0 -200px;
 }
 
@@ -713,7 +736,7 @@ form {
    ========================================================================== */
 .default.container { padding-top: 12px; }
 .default.container p { margin-bottom: 33px; }
-.default.container p:last-child { margin-bottom: 0; }
+.default.container p:last-of-type { margin-bottom: 0; }
 .banner { margin-top: 6.5%; padding-right: 5%; margin-bottom: 50px; }
 .banner h1, .banner h2 { margin: 0; }
 .banner h1 {
@@ -785,7 +808,7 @@ form {
 	padding-bottom: 31px;
 	margin-bottom: 52px;
 }
-.information-list li:last-child { margin-bottom: 0; border: 0; }
+.information-list li:last-of-type { margin-bottom: 0; border: 0; }
 
 .image-right img {
 	float: right;
@@ -855,7 +878,7 @@ form {
 .footer-container ul li.footer-nav { width: 43%; }
 .footer-container ul li nav { width: 100%; }
 .footer-container ul li li { margin-right: 11%; }
-.footer-container ul li li:last-child { margin-right: 0; }
+.footer-container ul li li:last-of-type { margin-right: 0; }
 
 .footer-container ul li.subscribe { width: 39%; }
 .footer-container ul li.subscribe form {}
@@ -879,15 +902,15 @@ form {
 
 @media only screen and (max-width: 480px) {
 	a.outline-btn, a.outline-btn:hover, button.outline-btn { width: 75%; }
-	.events-container section { padding-left: 0; }
+	.semantic-elements section { padding-left: 0; }
 	.events .date { 
 		position: relative; 
 		font-size: 14px;
-		line-height: normal;
 		width: auto; 
 		margin-bottom: 12px;
 	}
 	.events .date small { display: inline-block; margin-right: 5px; }
+	.events .date em { width: auto; line-height: normal; }
 }
 @media only screen and (max-width: 560px) {
 	.hero h1 { font-size: 22px; line-height: normal; }
@@ -897,10 +920,10 @@ form {
 @media only screen and (max-width: 800px) {
 	.hero h1, .hero p { width: 95%; }
 	.three-column .col { width: 47%; margin-right: 3%; }
-	.events-container .events, .riskbook-container { 
+	.semantic-elements article, .semantic-elements .sidebar { 
 		position: relative; float: none; 
 	}
-	.events-container .events, .riskbook-container, .events-container section {
+	.semantic-elements article, .semantic-elements .sidebar, .semantic-elements section {
 		width: 100%; 
 	}
 	.content-rectangle { width: 80%; }
@@ -922,7 +945,7 @@ form {
 	.two-column .col { width: 100%; float: none; }
 	.info-container .two-column .col:last-child { border: 0; }
 	.three-column .col { width: 95%; margin-right: 0; }
-	.question-container .three-column .col { min-height: 100%; }
+	.internal-coluum .col { min-height: 100%; text-align: left; }
 }
 
 /* ==========================================================================
