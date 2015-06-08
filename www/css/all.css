@@ -746,8 +746,38 @@ form {
 	margin-bottom: 5px;
 	font-weight: 400;
 }
+.breadcrumbs {
+	background-color: #11172E;
+}
+.breadcrumbs-list li,
+.breadcrumbs-list li a, .breadcrumbs-list li a:visited, .breadcrumbs-list li a:hover {
+	display: inline-block;
+	color: #fff;
+}
+.breadcrumbs-list li.back {
+	font-size: 14px;
+	letter-spacing: 0.5px;
+	line-height: 19px;
+}
+.breadcrumbs-list .arrow {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-right: 5px solid #40B4E5;
+	border-bottom: 5px solid transparent;
+}
+.breadcrumbs-list li.title {
+	font-family: Georgia;
+	font-size: 24px;
+	line-height: 27px;
+}
+.breadcrumbs-list li.title small {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 200;
+}
 
-.information-list {}
 .information-list li {
 	position: relative;
 	margin: 0 auto;
