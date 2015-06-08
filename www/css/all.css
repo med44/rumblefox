@@ -426,6 +426,18 @@ header a, header a:hover, header a:visited, header a:active { color: #fff; font-
 	line-height: 24px;	
 }
 
+.column-custom .lightblue-box {
+	background: #F4FBFE;
+	padding: 2% 10%;
+	width: 49%;
+	margin: 0;
+	margin-top: 14px;
+	margin-right: 2%;
+}
+.column-custom .lightblue-box:last-child {
+	margin-right: 0;
+}
+
 .info-container .two-column .col:last-child {
 	border-left: 1px solid #D0D4DB;
 }
@@ -743,8 +755,8 @@ form {
 	padding-bottom: 31px;
 	margin-bottom: 52px;
 }
-.information-list .image-right {
-}
+.information-list li:last-child { margin-bottom: 0; border: 0; }
+
 .image-right img {
 	float: right;
 }
