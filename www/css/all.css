@@ -313,18 +313,49 @@ header .logo {
 	margin-top: 19px; 
 	margin-bottom: 20px; 
 }
+.nav-wrapper { width: 94%; }
 header nav {
 	float: left; 
 	margin-left: 5%;
 	width: 80%;
+	position: relative;
 }
 header nav ul.main { float: left; width: 84%; }
-header nav ul.admin {float: right; width: auto; padding-top: 19px; }
+header nav ul.admin { float: right; width: auto; padding-top: 19px; }
 
 header nav ul.main li a {
 	display: block;
 	padding: 27px 20px 15px 20px;
 }
+
+header nav ul.admin.admin-menu { width: 16%; padding-top: 26px; display: table; }
+header nav ul.admin.admin-menu li { display: table-cell; vertical-align: middle; float: none; }
+header nav ul.admin li a {
+	display: block;
+	font-size: 16px;
+	color: #fff;
+	line-height: 22px;
+	width: 26px;
+	height: 26px;
+	background: transparent url("../images/icons-login.png") no-repeat 0 0;
+	margin: 0 auto;
+}
+header nav ul.admin li a.search {
+	background-position: 0 0;
+}
+header nav ul.admin li a.search:hover,
+header nav ul.admin li.active a.search {
+	background-position: 0 -37px;
+}
+
+header nav ul.admin li a.email {
+	background-position: -52px 0;
+}
+header nav ul.admin li a.profile {
+	background-position: -105px 0;
+}
+header nav ul.admin li a span { display: block; text-indent: -9999px; }
+
 header nav ul li { 
 	float: left; 
 	font-size: 16px;
@@ -1028,16 +1059,23 @@ a.open-panel, a.close-panel {
 		left: -70%;
 		top: 0;
 		height: 100%;
-		background: #777;
+		background: #001a71;
 		margin: 0;
 	}
 	header nav ul.main, header nav ul.admin { float: none; width: 100%; }
+	header nav ul.admin.admin-menu { margin: 0 auto; width: 52%; }
+
+	header nav ul.main li a { padding: 3% 0; }
 	header nav ul li {
 		float: none; 
 		display: block; 
 		padding: 0; 
-		border-bottom: 1px solid #fff; 
+		/*border-bottom: 1px solid #fff;*/
+		border-bottom: 0;
 		margin: 0; 
+	}
+	html.openNav {
+		overflow-x: hidden;
 	}
 	.openNav #wrapperContainer {
 		left: 0;
